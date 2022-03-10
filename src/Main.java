@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
+//Curso
 
         Curso curso1 = new Curso();
         curso1.setTitulo("Curso java 1");
@@ -16,52 +17,55 @@ public class Main {
         curso2.setDesc("desc c java 2");
         curso2.setCargaHoraria(8);
 
-
+//Mentoria
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("Mentoria java");
         mentoria.setDesc("desc mentoria java");
         mentoria.setDate(LocalDate.now());
 
 
-        /*System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria);*/
+        Conteudo cc =new Mentoria();
 
-        Bootcamp bootcamp= new Bootcamp();
+//BootCamp
+
+        Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("BootCamp Java");
         bootcamp.setDesc("Desc Boootcamp");
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
-        Dev dev =new Dev();
+ //User
+
+        Dev dev = new Dev();
         dev.setNome("Suraia");
         dev.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscritos Sura"+ dev.getConteudoInscritos());
+        System.out.println("Conteudos inscritos Sura" + dev.getConteudoInscritos());
         dev.progredir();
         dev.progredir();
 
         System.out.println("-");
-        System.out.println("Conteudos inscritos Sura"+ dev.getConteudoInscritos());
-        System.out.println("Conteudos conculidos Sura"+ dev.getConteudoConcluido());
-        System.out.println("XP Sura "+ dev.calcularTotalXp());
+        System.out.println("Conteudos inscritos Sura" + dev.getConteudoInscritos());
+        System.out.println("Conteudos conculidos Sura" + dev.getConteudoConcluido());
+        System.out.println("XP Sura " + dev.calcularTotalXp());
 
 
         System.out.println("---------------");
 
-        Dev devj= new Dev();
+
+        Dev devj = new Dev();
         devj.setNome("John");
         devj.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscritos John"+ devj.getConteudoInscritos());
+        System.out.println("Conteudos inscritos John" + devj.getConteudoInscritos());
 
         devj.progredir();
         devj.progredir();
         devj.progredir();
         System.out.println("-");
 
-        System.out.println("Conteudos inscritos John"+ devj.getConteudoInscritos());
-        System.out.println("Conteudos conculidos John"+ dev.getConteudoConcluido());
-        System.out.println("XP John "+ devj.calcularTotalXp());
+        System.out.println("Conteudos inscritos John" + devj.getConteudoInscritos());
+        System.out.println("Conteudos conculidos John" + dev.getConteudoConcluido());
+        System.out.println("XP John " + devj.calcularTotalXp());
 
 
     }
