@@ -1,3 +1,4 @@
+import ao.com.dio.desafio.Conteudo;
 import ao.com.dio.desafio.Curso;
 import ao.com.dio.desafio.Mentoria;
 
@@ -17,6 +18,9 @@ public class Main {
         curso2.setTitulo("Curso java");
         curso2.setDesc("desc c java");
         curso2.setCargaHoraria(8);
+
+        Conteudo cc=new Curso();
+
 
         Mentoria mentoria =new Mentoria();
         mentoria.setTitulo("Mentoria java");
