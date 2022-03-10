@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Mentoria extends Conteudo {
 
     LocalDate date;
-    String Test;
+
 
     public Mentoria() {
     }
